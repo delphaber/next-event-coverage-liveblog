@@ -50,6 +50,7 @@ export async function getServerSideProps() {
         ...graphqlRequest,
         initialData: await request(graphqlRequest),
         token: process.env.NEXT_PUBLIC_DATOCMS_API_TOKEN,
+        baseUrl: "https://graphql-listen-staging.datocms.com",
       },
     },
   };
