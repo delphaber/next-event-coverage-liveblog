@@ -1,15 +1,15 @@
-import { cache } from 'react';
-import { TypedDocumentNode } from '@graphql-typed-document-node/core';
+import { cache } from "react";
+import { TypedDocumentNode } from "@graphql-typed-document-node/core";
 import { print } from "graphql";
 
 // The `body` argument is expected to be a string:
 // it's used by the `cache` function to build a cache key.
 const cachedRequest = cache(async ({ body }: { body: string }) => {
-  const response = await fetch('https://graphql.datocms.com/', {
+  const response = await fetch("https://graphql.staging-datocms.com/", {
     headers: {
       Authorization: `Bearer ${process.env.NEXT_PUBLIC_DATOCMS_API_TOKEN}`,
     },
-    method: 'POST',
+    method: "POST",
     body,
   });
 

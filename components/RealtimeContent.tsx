@@ -34,6 +34,7 @@ type Subscription = {
   variables: { limit: number };
   initialData: HomePageQuery;
   token: string;
+  baseUrl?: string;
 };
 
 export default function RealtimeContent({
@@ -45,14 +46,15 @@ export default function RealtimeContent({
 
   useEffect(() => setHydrated(true), []);
 
-  const { query, variables, initialData, token } = subscription;
-  
+  const { query, variables, initialData, token, baseUrl } = subscription;
+
   const { data, error, status } = useQuerySubscription({
     query: print(query),
     variables,
     initialData,
     token,
     enabled: true,
+    baseUrl,
   });
 
   return (

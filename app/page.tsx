@@ -1,8 +1,8 @@
-import { graphql } from '@/gql';
+import { graphql } from "@/gql";
 
-import { request } from '../lib/datocms';
+import { request } from "../lib/datocms";
 
-import RealtimeContent from '../components/RealtimeContent';
+import RealtimeContent from "../components/RealtimeContent";
 
 const PAGE_CONTENT_QUERY = graphql(`
   query HomePage($limit: IntType) {
@@ -28,7 +28,7 @@ const PAGE_CONTENT_QUERY = graphql(`
 `);
 
 export const metadata = {
-  title: 'Create Next App',
+  title: "Create Next App",
 };
 
 const getPageContent = async () => {
@@ -59,6 +59,7 @@ export default async function Home() {
           variables: { limit: 10 },
           initialData,
           token: process.env.NEXT_PUBLIC_DATOCMS_API_TOKEN!,
+          baseUrl: "https://graphql-listen.staging-datocms.com",
         }}
       />
     </div>

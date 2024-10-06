@@ -20,7 +20,7 @@ Demo here: [https://next-event-coverage-liveblog.vercel.app/](https://next-event
 
 Click this button to test and deploy this demo project to [Vercel](https://vercel.com/), along with a fully configured DatoCMS project and a Github repo:
 
-[![Deploy with DatoCMS](https://dashboard.datocms.com/deploy/button.svg)](https://dashboard.datocms.com/deploy?repo=datocms/next-event-coverage-liveblog)
+[![Deploy with DatoCMS](https://dashboard.datocms.com/deploy/button.svg)](https://dashboard.staging-datocms.com/deploy?repo=delphaber/next-event-coverage-liveblog)
 
 ## Learn More
 

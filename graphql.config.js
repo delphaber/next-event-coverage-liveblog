@@ -5,7 +5,7 @@ require("dotenv").config({ path: ".env.local" });
 module.exports = {
 	schema: [
 		{
-			"https://graphql.datocms.com": {
+			"https://graphql.staging-datocms.com": {
 				headers: {
 					Authorization: `Bearer ${process.env.NEXT_PUBLIC_DATOCMS_API_TOKEN}`,
 					"X-Exclude-Invalid": "true",
